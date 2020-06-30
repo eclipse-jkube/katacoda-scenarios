@@ -21,9 +21,8 @@ touch src/main/java/com/example/demo/DemoResource.java
 
 The previous command will create an empty file for our REST endpoint class ready for us to edit.
 
-`src/main/java/com/example/demo/DemoResource.java`{{open}}
-
-With can add the following content to the empty file and create a valid `DemoResource` class:
+We open the file `src/main/java/com/example/demo/DemoResource.java`{{open}} in the editor
+and add the following content to the empty file to create a valid `DemoResource` class:
 <pre class="file" data-filename="src/main/java/com/example/demo/DemoResource.java" data-target="replace">
 package com.example.demo;
 
@@ -41,6 +40,7 @@ public class DemoResource {
 </pre>
 
 The class is annotated with `@RestController` which will be auto-detected by Spring.
+
 The class contains a single method `hello()` annotated with `@GetMapping`.
-The detected configuration inferred from this annotations translates into having an endpoint in the root path which will 
+The detected configuration inferred from these annotations translates into having an endpoint in the root path which will 
 respond `hello` to any HTTP request.

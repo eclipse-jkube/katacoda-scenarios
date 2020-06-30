@@ -3,11 +3,14 @@ We can now proceed to compile our application and deploy it into the cluster:
 ./mvnw install k8s:build k8s:resource k8s:apply
 ```{{execute}}
 
-- `k8s:build` goal will take care of building a Docker image for our application
-- `k8s:resource` goal will create our resource manifests in `target/classes/META-INF/jkube/kubernetes.yml`{{open}}
+- `k8s:build` goal will take care of building a Docker image for our application. The image is Java 11 compatible
+  and contains the generated spring-boot jar.
+- `k8s:resource` goal will create our resource manifests in `target/classes/META-INF/jkube/kubernetes.yml`{{open}}.
+  The manifests include a Deployment with a container that references the image built in the previous goal and an HTTP port `8080`.
+  It also includes a Service that exposes the mentioned port.
 - `k8s:apply` goal will apply the generated resource manifests to the configured cluster (similar to `kubectl apply -f`)
 
-Our endpoint should be ready by now, we can test it by invoking:
+Once the deployment is available and the Pod ready we can test it by invoking:
 ```
 curl $(kubectl get svc demo -o jsonpath="{.spec.clusterIP}"):8080
 ```{{execute}}
