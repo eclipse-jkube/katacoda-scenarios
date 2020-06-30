@@ -1,4 +1,4 @@
-The next step is to add Eclipse JKube Maven dependency into the plugin section.
+The next step is to add Eclipse JKube Kubernetes Maven plugin dependency into the plugin section.
 
 We open the project's `pom.xml`{{open}} file in the editor, and we'll add the following entry into the `<plugins>` section:
 
