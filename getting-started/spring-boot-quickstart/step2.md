@@ -7,7 +7,7 @@ We open the project's `pom.xml`{{open}} file in the editor, and we'll add the fo
       &lt;plugin&gt;
         &lt;groupId&gt;org.eclipse.jkube&lt;/groupId&gt;
         &lt;artifactId&gt;kubernetes-maven-plugin&lt;/artifactId&gt;
-        &lt;version&gt;1.0.0-alpha-4&lt;/version&gt;
+        &lt;version&gt;1.0.0-rc-1&lt;/version&gt;
       &lt;/plugin&gt;
 </pre>
 
