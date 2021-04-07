@@ -47,7 +47,7 @@ Next, we will define our project configuration:
       &lt;plugin&gt;
         &lt;groupId&gt;org.eclipse.jkube&lt;/groupId&gt;
         &lt;artifactId&gt;kubernetes-maven-plugin&lt;/artifactId&gt;
-        &lt;version&gt;1.1.0&lt;/version&gt;
+        &lt;version&gt;1.2.0&lt;/version&gt;
       &lt;/plugin&gt;
     &lt;/plugins&gt;
   &lt;/build&gt;
